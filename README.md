@@ -16,6 +16,8 @@ A Linux-native command center that puts every repo in your dev directories into 
 
 ---
 
+> **`macos-compat` branch:** an experimental effort to get Orrery working fully on macOS — not fully tested yet. See [MACOS.md](MACOS.md) for purpose and status.
+
 > **Status:** 🚧 Early development, but functional. Now a **native Rust app on GPUI** (no webview) — the earlier Tauri 2 + React build was rewritten for GPU rendering. Mission Control, multi-host enrichment, launchers, Inbox/Feed/Explore/Cleanup/Agents/Dev Tools, and local AI all work. Tagged releases produce `.deb`/`.rpm`/`.AppImage`; you can also [build from source](https://hankanman.github.io/Orrery/guide/getting-started). Expect rough edges; track progress in [the issues](../../issues).
 
 ## What is it?
