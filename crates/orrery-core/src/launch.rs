@@ -63,7 +63,9 @@ pub fn launch(template: &str, path: &str) -> Result<(), String> {
 
 /// Open a folder path or URL in the system default handler (xdg-open), detached.
 pub fn open(target: &str) -> Result<(), String> {
-    Command::new("xdg-open")
+    // macOS has no xdg-open; its equivalent is `open`.
+    let opener = if cfg!(target_os = "macos") { "open" } else { "xdg-open" };
+    Command::new(opener)
         .arg(target)
         .stdin(Stdio::null())
         .stdout(Stdio::null())
